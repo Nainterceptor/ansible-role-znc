@@ -1,0 +1,13 @@
+[Unit]
+Description=ZNC - an advanced IRC bouncer
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/znc
+User=panda
+Type=forking
+PrivateTmp=false
+NoNewPrivileges=yes
+
+[Install]
+WantedBy=multi-user.target

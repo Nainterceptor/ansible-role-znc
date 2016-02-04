@@ -1,2 +1,14 @@
 ---
 # handlers file for roles/Nainterceptor.znc
+- name: "Restart ZNC"
+  service:
+    name: znc
+    state: restarted
+  when: ansible_distribution == 'CentOS'
+
+- name: "Enable ZNC"
+  service:
+    name: znc
+    state: started
+    enabled: yes
+  when: ansible_distribution == 'CentOS'

@@ -1,2 +1,5 @@
 ---
 # defaults file for roles/Nainterceptor.znc
+user: foobar
+user_password: null
+pub_key_path: null
